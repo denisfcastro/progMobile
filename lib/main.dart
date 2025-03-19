@@ -10,8 +10,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Denis app',
-      theme: ThemeData(primarySwatch: Colors.green),
+      title: 'Controlar Agenda',
+      theme: ThemeData(primarySwatch: Colors.blueGrey),
       home: const LoginScreen(),
     );
   }
@@ -43,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Patriota APP')),
+      appBar: AppBar(title: const Text('Controlar Agenda')),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -54,19 +54,19 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 CircleAvatar(
                   radius: 50,
-                  backgroundImage: AssetImage('assets/BolsonaroCareca.png'),
+                  backgroundImage: AssetImage('assets/papelDeParedeAPP.png'),
                 ),
                 const SizedBox(height: 16),
                 TextFormField(
                   controller: _emailController,
                   keyboardType: TextInputType.emailAddress,
                   decoration: const InputDecoration(
-                    labelText: 'Título eleitoral',
+                    labelText: 'Email',
                     border: OutlineInputBorder(),
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Por favor, insira seu título';
+                      return 'Por favor, insira seu Email';
                     }
                     return null;
                   },
@@ -76,7 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   controller: _passwordController,
                   obscureText: true,
                   decoration: const InputDecoration(
-                    labelText: 'Senha do mito',
+                    labelText: 'Senha',
                     border: OutlineInputBorder(),
                   ),
                   validator: (value) {
@@ -96,8 +96,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: ElevatedButton(
                     onPressed: _login,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.green,
-                      foregroundColor: Colors.yellow,
+                      backgroundColor: Colors.blueAccent,
+                      foregroundColor: Colors.white,
                     ),
                     child: const Text('Login'),
                   ),

@@ -21,7 +21,7 @@ dev_dependencies:
 
 flutter:
   assets:
-    - assets/BolsonaroCareca.png
+    - assets/papelDeParedeAPP.png
 
   uses-material-design: true
 
